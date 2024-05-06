@@ -6,7 +6,6 @@ import NewsDetails from "./pages/NewsDetails";
 import Page404 from "./pages/Page404";
 // Import componentele pt routing
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { getNewsCategoriesEndpoint } from "./api/endpoints";
 
 // Ne definim rutele necesare aplicatiei
 const router = createBrowserRouter([
@@ -20,7 +19,7 @@ const router = createBrowserRouter([
     element: <Favorites />,
   },
   {
-    path: "/category/:categoryID",
+    path: "/category/:categoryId",
     element: <NewsCategory/>,
   },
   {
@@ -29,14 +28,6 @@ const router = createBrowserRouter([
   },
 ]);
 function App() {
-  useEffect(()=>{
-    const categoryApiLink = getNewsCategoriesEndpoint('football');
-    fetch(categoryApiLink)
-    .then((response)=>response.json())
-    .then((data)=>{
-      console.log(data);
-    })
-  },[])
   return (
     <div className="App">
       <RouterProvider router={router} />
