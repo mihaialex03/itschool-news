@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useReducer } from "react";
 import Favorites from "./pages/Favorites";
 import Home from "./pages/Home";
 import NewsCategory from "./pages/NewsCategory";
@@ -6,6 +6,8 @@ import NewsDetails from "./pages/NewsDetails";
 import Page404 from "./pages/Page404";
 // Import componentele pt routing
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { favoritesReducer, initialState } from "./store/Favorites/reducer";
+import { FavoritexContext } from "./store/Favorites/context";
 
 // Ne definim rutele necesare aplicatiei
 const router = createBrowserRouter([
@@ -20,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/category/:categoryId",
-    element: <NewsCategory/>,
+    element: <NewsCategory />,
   },
   {
     path: "/news/:newsId",
@@ -28,9 +30,20 @@ const router = createBrowserRouter([
   },
 ]);
 function App() {
+  // initializez reducerul pt stirile favorite
+  const [favoritesState, favoritesDispatch] = useReducer(
+    favoritesReducer,
+    initialState
+  );
+  const favoritesContextValue = {
+    favoritesState,
+    favoritesDispatch,
+  };
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <FavoritexContext.Provider value={favoritesContextValue}>
+        <RouterProvider router={router} />
+      </FavoritexContext.Provider>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import { getNewsCategoriesEndpoint } from "../api/endpoints";
 import { useFetch } from "../utils/hooks/useFetch";
 import { getNewsList } from "../api/adaptors";
 import { Container } from "react-bootstrap";
-import NewsCardList from "../components/NewsListList";
+import NewsCardList from "../components/NewsCardList";
 export default function NewsCategory() {
   // extrag parametru categoryId din URL
   const { categoryId } = useParams();

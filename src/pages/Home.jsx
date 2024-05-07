@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import { Container } from "react-bootstrap";
-import NewsCardList from "../components/NewsListList";
+import NewsCardList from "../components/NewsCardList";
 import { Link } from "react-router-dom";
 import { getNewsCategoriesEndpoint } from "../api/endpoints";
 import { useFetch } from "../utils/hooks/useFetch";
