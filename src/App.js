@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from "react";
+import { useReducer } from "react";
 import Favorites from "./pages/Favorites";
 import Home from "./pages/Home";
 import NewsCategory from "./pages/NewsCategory";
