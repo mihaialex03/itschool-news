@@ -1,0 +1,13 @@
+.pagination a{
+    color: var(--text-primary);
+}
+.pagination{
+    color: var(--text-primary);
+}
+.pagination span#pagination-active{
+    background-color: var(--bg-primary);
+    border-color: var(--bg-primary);
+}
+.pagination{
+    margin: 10px;
+}

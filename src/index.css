@@ -27,8 +27,11 @@ ul {
 }
 
 a {
-  display: block;
+  color: inherit;
   text-decoration: none;
+}
+a:hover{
+  color: inherit;
 }
 
 /* Customizam Bootstrap: */
@@ -44,7 +47,7 @@ a {
 }
 
 .text-secondary {
-  color: #fbb44c !important;
+  color: #2bb686 !important;
 }
 
 .text-light {

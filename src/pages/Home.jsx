@@ -45,6 +45,20 @@ export default function Home() {
           </p>
         </Container>
       </section>
+      <section className="favorites my-5">
+        <Container>
+          <h1 className="mb-5 pt-3">Favorites</h1>
+          <p>Vrei sa salvezi stirile tale favorite pentru a le citi mai tarziu?</p>
+          <p>In cadrul fiecarei stiri gasesti butonul de "Adauga la favorite"</p>
+          <p className="pb-3">
+            Viziteaza sectiunea {" "}
+            <Link to="/favorites" className="text-secondary">
+               Favorite
+            </Link>
+            {" "}pentru a vizita sectiunea.
+          </p>
+        </Container>
+      </section>
     </Layout>
   );
 }
