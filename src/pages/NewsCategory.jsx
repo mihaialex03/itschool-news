@@ -4,7 +4,7 @@ import { useParams, useSearchParams } from "react-router-dom";
 import { getNewsCategoriesEndpoint } from "../api/endpoints";
 import { useFetch } from "../utils/hooks/useFetch";
 import { getNewsList } from "../api/adaptors";
-import { Container, Pagination } from "react-bootstrap";
+import { Container} from "react-bootstrap";
 import NewsCardList from "../components/NewsCardList";
 import NewsPagination from "../components/NewsPagination";
 export default function NewsCategory() {
